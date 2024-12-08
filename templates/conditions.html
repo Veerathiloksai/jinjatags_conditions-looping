@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operational jinjatags</title>
+</head>
+<body>
+    <center>
+        <h1>IF CONDITION</h1>
+        {% if age > 20 %}
+            <h2>{{name}}</h2>
+        {% endif %}
+
+        <h1>IF ELSE CONDITION</h1>
+        {% if age > 18 %}
+            <h2>{{name}} is Major</h2>
+        {% else %}
+            <h2>{{name}} is Minor</h2>
+        {% endif %}
+
+        <h1>IF ELIF CONDITION</h1>
+        {% if age < 15 %}
+            <h2>Bhaai fan</h2>
+        {% elif maturity == 'no' %}
+            <h2>{{name}} is Bhaai fan</h2>
+        {% else %}
+            <h2>{{name}} not a Bhaai fan</h2>
+        {% endif %}
+
+        <h1>ELSE-IF CONDITION</h1>
+        {% if age > 18 %}
+            {% if status == 'single' %}
+                <h2>{{name}} is Ready to mingle</h2>
+            {% else %}
+                <h2>{{name}} not ready to mingle</h2>
+            {% endif %}
+        {% else %}
+            {% if status == 'single' %}
+                <h2>{{name}} is Ready to mingle</h2>
+            {% else %}
+                <h2>{{name}} not ready to mingle</h2>
+            {% endif %}
+        {% endif %}
+
+        <h1>FOR LOOP</h1>
+        {% for i in name %}
+            <h2>{{i}}</h2>
+        {% endfor %}
+    </center>
+</body>
+</html>
